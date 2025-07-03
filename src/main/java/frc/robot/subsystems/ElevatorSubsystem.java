@@ -1,7 +1,8 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
-import com.revrobotics.CANSparkMax;import com.revrobotics.RelativeEncoder;
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.RelativeEncoder;
 import com.revrobotics.CANSparkMaxLowLevel.MotorType;
 import edu.wpi.first.math.controller.PIDController;
 
@@ -29,12 +30,18 @@ public class ElevatorSubsystem extends SubsystemBase{
         motor.set(0);
     }
 
-    public void SetTargetPosition(){
-        double output = pid.calculate(getPosition(),positionMeters);
+    public void SetTargetPosition(double output){
+        output = pid.calculate(getPosition(),positionMeters);
         motor.set(output);
     }
 
     public double getPosition() {
         return encoder.getPosition();
     }
+
+    public void setTargetPosition(double target) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'setTargetPosition'");
+    }
+
 }

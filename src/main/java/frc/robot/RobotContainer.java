@@ -7,13 +7,13 @@ import frc.robot.Constants.OIConstants;
 import frc.robot.commands.ElevatorManualCommand;
 import frc.robot.commands.ElelvatorPositionCommand;
 import frc.robot.commands.SwerveJoystickCmd;
-import frc.robot.subsystems.ElelvatorSubsystem;
+import frc.robot.subsystems.ElevatorSubsystem;
 import frc.robot.subsystems.SwerveSubsystem;
 
 public class RobotContainer {
 
     private final SwerveSubsystem swerveSubsystem = new SwerveSubsystem();
-    private final ElelvatorSubsystem elevator = new ElelvatorSubsystem(0);
+    private final ElevatorSubsystem elevator = new ElevatorSubsystem(0);
 
     private final XboxController driverJoystick = new XboxController(OIConstants.kDriverControllerPort);
 
